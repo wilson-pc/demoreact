@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./pages/home";
 import Register from "./pages/register";
+import Login from "./pages/login"
 import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -37,6 +38,11 @@ function App() {
                     Register
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link " to="/login">
+                    Login
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -48,6 +54,9 @@ function App() {
         </Route>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/login">
+          <Login />
         </Route>
       </Switch>
     </div>
